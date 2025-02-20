@@ -6,41 +6,25 @@
  * 2.
  */
 
-const denseRank = (arr1, arr2) => {
-  const ranked = [];
-  const ranks = [];
+function denseRank(leaderboard, scores) {
+  let uniqueRanks = [...new Set(leaderboard)].sort((a, b) => b - a);
 
-  let newArr = [...new Set(arr1)];
-  for (let i = 0; i < newArr.length; i++) {
-    ranks.push(i + 1);
-  }
+  let result = [];
 
-  for (const score of arr2) {
+  for (let score of scores) {
     let rank = 1;
-    for (const ranking of newArr) {
-      if (score >= ranking) {
-        ranked.push(rank);
+    for (let rankScore of uniqueRanks) {
+      if (score >= rankScore) {
+        break;
       }
       rank++;
     }
-    return ranked;
+    result.push(rank);
   }
 
-  //   for (let score of arr2) {
-  //     let rank = 1;
-  //     for (let scoreRank of newArr) {
-  //       if (score >= scoreRank) {
-  //         ranked.push(rank);
-  //       } else if (score < scoreRank) {
-  //         rank++;
-  //       }
-  //       rank++;
-  //       ranked.push(rank);
-  //     }
-  //     return ranked;
-  //   }
-  //   console.log(ranked);
-};
+  return result;
+}
 
-console.log(denseRank([100, 100, 90, 80, 70, 60], [50, 60, 76, 80, 105]));
-// console.log(denseRank());
+console.log(denseRank([100, 100, 50, 40, 40, 20, 10], [5, 25, 50, 120]));
+
+console.log(denseRank([100, 90, 90, 80, 75, 60], [50, 65, 77, 90, 102]));
