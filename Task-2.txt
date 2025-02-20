@@ -1,0 +1,17 @@
+Identifikasi Error
+
+A. Tidak terdapat user yang ingin di ambil data nya, error terjadi pada fungsi getUserData di dalam file app.js baris ke 15 kolom ke 10 yang di panggil di dalam fungsi processUser di dalam file yang sama bari ke 30 kolom ke 5 yang di panggil di main pada file app.js baris ke 50 kolom ke 2;
+Kesimpulan : User yang ingin di proses data nya tidak ada.
+
+B. Panjang variabel yang diukur oleh properti length bernilai null, atau sama dengan 0, Error terdapat pada fungsi processdata di dalam file data.js baris ke 8 kolom ke 15 yang di panggil pada fungsi handleRequest yang berada didalam file server.js baris ke 2 kolom ke 5 yang di panggil pada main di dalam file app.js pada baris ke 35 kolom ke 2.
+Kesimpulan : Panjang variabel yang di ukur oleh properti length bernilai null atau 0;
+
+C. Terdapat karakter yang tidak diduga pada file javascript script.js baris ke 5.
+Kesimpulan : Terdapat karakter ')' yang tidak di harapkan.
+
+D. Tidak terdapat variabel yang akan di set properti status pada nya, atau variabel tersebut undefined, belum di inisialisasi. terdapat pada fungsi updateOrder di file order.js baris ke 18 kolom ke 12 di panggil di dalam fungsi processOrder di file yang sama pada baris ke 35 kolom 5 yang di panggil pada fungsi checkout di dalam file cart.js baris 50, kolom 2.
+Kesimpulan : ada variebel yang bernilai undefined, atau  belum di inisialisasi
+
+
+E. Pemanggilan fungsi mencapai batas maksimum pada, terdapat pada fungsi recursiveFunction pada file javascript app.js baris ke 10 dan kolom ke 3.
+Kesimpulan : Dalam hal ini terjadi pemanggilan fungsi yang tak hingga.
